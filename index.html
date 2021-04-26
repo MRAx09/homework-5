@@ -26,16 +26,18 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <body id="currentDay" class="currentDay"></body>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="time-block">
-        <div class="row">9AM
-          <p><textarea id="textarea" rows="6"></textarea></p>
-          <button class="buttonsave btn btn-default" id="saveBtn"><i>Add Item</i></button>
+      <form id="cal-form">
+        <div class="time-block">
+          <div class="row">9AM
+            <input type="text" class="hour" id="textarea" name="textarea" placeholder="Enter an event" />
+            <button class="saveBtn"><i>Add Item</i></button>
+          </div>
         </div>
-      </div>
+      </form>
 
       <ul id="event-list"></ul>
     </div>

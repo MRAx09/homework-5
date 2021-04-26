@@ -7,7 +7,7 @@ $("#currentDay").text(day.format("MMM Do, YYYY"));
 function handleFormSubmit(event) {
     event.preventDefault();
 
-    var calEvent = $('input[name="calendar-input"]').val();
+    var calEvent = $('input[name="textarea"]').val();
 
     if (!calEvent) {
         console.log('No events added to calendar!');
@@ -19,18 +19,10 @@ function handleFormSubmit(event) {
     );
     listeItemEl.text(calEvent);
 
-    // add delete button to remove shopping list item
-    listeItemEl.append(
-        '<button class="saveBtn">Remove</button>'
-    )
-
-    $("#save").click(function() {
-        var saveText = $("textarea#textArea").val();
-        
-        document.getElementById("myTextArea").innerHTML = saveText;
-        
-        /*alert(saveText);*/
-        });
+    function storeData() {
+        var input = document.getElementById("textarea").value;
+        alert(input);
+    }
 
     listEl.append(listEl);
 }
