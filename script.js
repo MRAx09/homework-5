@@ -25,5 +25,5 @@ function handleFormSubmit(event) {
 }
 
 // TODO: 4. What is the current time in the format: hours:minutes:seconds
-var time = moment().format("hh:mm:ss");
-$("#4a").text(time);
+var day = moment();
+$("#currentDay").text(day.format("MMM Do, YYYY"));
