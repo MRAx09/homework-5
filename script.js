@@ -24,5 +24,13 @@ function handleFormSubmit(event) {
         '<button class="saveBtn">Remove</button>'
     )
 
+    $("#save").click(function() {
+        var saveText = $("textarea#textArea").val();
+        
+        document.getElementById("myTextArea").innerHTML = saveText;
+        
+        /*alert(saveText);*/
+        });
+
     listEl.append(listEl);
 }
