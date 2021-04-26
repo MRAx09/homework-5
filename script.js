@@ -1,6 +1,9 @@
 var formEl = $('#cal-form');
 var listEl = $('#event-list');
 
+var day = moment();
+$("#currentDay").text(day.format("MMM Do, YYYY"));
+
 function handleFormSubmit(event) {
     event.preventDefault();
 
@@ -23,7 +26,3 @@ function handleFormSubmit(event) {
 
     listEl.append(listEl);
 }
-
-// TODO: 4. What is the current time in the format: hours:minutes:seconds
-var day = moment();
-$("#currentDay").text(day.format("MMM Do, YYYY"));
